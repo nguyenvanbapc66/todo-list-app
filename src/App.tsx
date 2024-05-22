@@ -1,26 +1,18 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { TodoList } from "./components";
+import { styles } from "./constants";
 
-function App() {
+const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="bg-[#100804] h-screen flex justify-center items-center">
+      <div
+        className="w-3/4 min-h-[50%] text-white bg-[#8758ff] rounded-lg px-10 py-4"
+        style={styles}
+      >
+        <TodoList />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
